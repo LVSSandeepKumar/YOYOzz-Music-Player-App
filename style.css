@@ -1,0 +1,138 @@
+body {
+    background-color : antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 64px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+nav ul li {
+    padding : 0 12px;
+}
+
+.container {
+    min-height: 61vh;
+    background-color: black;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: 22px auto;
+    width: 72%;
+    border-radius: 12px;
+    padding: 22px 34px;
+}
+
+.songBanner {
+    margin-top: 9%;
+    margin-left: 3%;
+    width: fit-content;
+    height: max-content;
+}
+
+.songBanner img {
+    height: 47vh;
+    width: 40vw;
+    margin-top: 0;
+    margin: 0 10%;
+    border-radius: 12px;
+}
+
+.bottom {
+    position:sticky;
+    height:130px;
+    background-color: black;
+    color:white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 20px;
+}
+
+.icons i {
+    margin-top:20px;
+    margin: 0 5px;
+}
+
+#myProgressBar {
+    width:80vw;
+    cursor: pointer;
+}
+
+.songItem {
+    height: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 34px;
+    margin: 12px 0;
+    padding: 0 12px;
+}
+
+.songitem span {
+    margin : 0 23px;
+    padding: 0 12px;
+}
+
+.timeStamp i {
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.songInfo img {
+    width : 31px;
+    opacity : 0;
+    transition: opacity 0.4s ease-in;
+}
+
+
+@media (max-width : 512px) {
+    .songBanner img {
+        height:0px;
+        width: 0px;
+    }
+
+    #myProgressBar {
+        margin-bottom: 30px;
+    }
+
+    .songInfo {
+        position: absolute;
+        margin-bottom: 27px;
+    }
+}
+    
+@media (min-width:512px) and (max-width:992px) {
+    .songBanner img {
+
+        height: 38vh;
+        width: 40vw;
+        margin: 0 5%;
+        border-radius: 12px;
+    }
+}
