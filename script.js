@@ -64,6 +64,18 @@ audioElement.addEventListener('timeupdate', () => {
     myProgressBar.value=progress;
 })
 
+audioElement.addEventListener('ended', ()=> {
+    songIndex+=1;
+    audioElement.src=`./songs/${songIndex}.mp3`;
+    audioElement.play();
+    songPlaying();
+    songItemPlay[songIndex-1].classList.remove('fa-circle-play');
+    songItemPlay[songIndex-1].classList.add('fa-circle-pause');
+    songItemPlay[songIndex].classList.remove('fa-circle-pause');
+    songItemPlay[songIndex].classList.add('fa-circle-play');
+    document.getElementById('masterSongName').innerText=songs[songIndex-1].songName;
+})
+
 myProgressBar.addEventListener('change',() => {
     audioElement.currentTime = (myProgressBar.value * audioElement.duration) / 100;
 } )
